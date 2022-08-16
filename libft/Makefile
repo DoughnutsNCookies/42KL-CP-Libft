@@ -6,7 +6,7 @@
 #    By: schuah <schuah@student.42kl.edu.my>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/16 17:57:30 by schuah            #+#    #+#              #
-#    Updated: 2022/08/16 17:59:03 by schuah           ###   ########.fr        #
+#    Updated: 2022/08/16 18:09:50 by schuah           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -80,8 +80,8 @@ SRCS 			= 	$(addprefix $(SRCS_DIR), $(addsuffix .c, $(SRC_FILES)))
 OBJS 			= 	$(addprefix $(OBJS_DIR), $(addsuffix .o, $(SRC_FILES)))
 
 all:				
-					@mkdir -p $(OBJS_DIR)
-					@make $(NAME)
+					mkdir -p $(OBJS_DIR)
+					make $(NAME)
 
 $(OBJS_DIR)%.o:		$(SRCS_DIR)%.c
 					$(CC) $(CFLAGS) -c $< -o $@

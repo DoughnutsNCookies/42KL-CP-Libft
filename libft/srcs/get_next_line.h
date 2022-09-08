@@ -17,9 +17,7 @@
 #  define BUFFER_SIZE 42
 # endif
 
-# include <unistd.h>
-# include <stdlib.h>
-# include <fcntl.h>
+# include "libft.h"
 
 char	*ft_strcomb(char *dst, char *src);
 int		checkend(char c);

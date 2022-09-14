@@ -57,7 +57,7 @@ char	**ft_split(char const *s, char c)
 	if (!s)
 		return (NULL);
 	count = ft_getwc(s, c);
-	output = malloc(sizeof(char *) * count + 1);
+	output = malloc(sizeof(char *) * (count + 1));
 	if (output == NULL)
 		return (NULL);
 	i = 0;

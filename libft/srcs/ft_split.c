@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: schuah <schuah@student.42.fr>              +#+  +:+       +#+        */
+/*   By: schuah <schuah@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/05 14:02:20 by schuah            #+#    #+#             */
-/*   Updated: 2022/07/23 21:09:01 by schuah           ###   ########.fr       */
+/*   Updated: 2022/09/19 17:11:08 by schuah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,21 +30,6 @@ int	ft_getwc(char const *s, char c)
 		count++;
 	}
 	return (count);
-}
-
-char	*ft_strndup(char *str, size_t n)
-{
-	size_t	i;
-	char	*output;
-
-	output = malloc(sizeof(char) * n + 1);
-	if (output == NULL)
-		return (NULL);
-	i = -1;
-	while (++i < n)
-		output[i] = str[i];
-	output[i] = '\0';
-	return (output);
 }
 
 char	**ft_split(char const *s, char c)

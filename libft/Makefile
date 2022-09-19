@@ -5,8 +5,8 @@
 #                                                     +:+ +:+         +:+      #
 #    By: schuah <schuah@student.42kl.edu.my>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/08/16 17:57:30 by schuah            #+#    #+#              #
-#    Updated: 2022/08/16 18:09:50 by schuah           ###   ########.fr        #
+#    Created: 2022/09/03 13:10:50 by schuah            #+#    #+#              #
+#    Updated: 2022/09/19 17:06:34 by schuah           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,12 +35,14 @@ SRC_FILES		=	ft_isalpha \
 					ft_strchr \
 					ft_strrchr \
 					ft_strncmp \
+					ft_strcmp \
 					ft_memchr \
 					ft_memcmp \
 					ft_strnstr \
 					ft_atoi \
 					ft_calloc\
 					ft_strdup \
+					ft_strndup \
 					ft_substr \
 					ft_strjoin \
 					ft_strtrim \
@@ -83,7 +85,7 @@ all:
 					mkdir -p $(OBJS_DIR)
 					make $(NAME)
 
-$(OBJS_DIR)%.o:		$(SRCS_DIR)%.c
+$(OBJS_DIR)%.o:		$(SRCS_DIR)%.c | $(OBJSF)
 					$(CC) $(CFLAGS) -c $< -o $@
 
 $(NAME):			$(OBJS)

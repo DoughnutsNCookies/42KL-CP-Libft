@@ -1,22 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_swap.c                                          :+:      :+:    :+:   */
+/*   ft_strndup.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: schuah <schuah@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/20 17:47:13 by schuah            #+#    #+#             */
-/*   Updated: 2022/09/19 14:41:59 by schuah           ###   ########.fr       */
+/*   Created: 2022/09/19 17:05:56 by schuah            #+#    #+#             */
+/*   Updated: 2022/09/19 17:07:06 by schuah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_swap(int *a, int *b)
+char	*ft_strndup(const char *str, size_t n)
 {
-	int	temp;
+	size_t	i;
+	char	*output;
 
-	temp = *a;
-	*a = *b;
-	*b = temp;
+	output = malloc(sizeof(char) * n + 1);
+	if (output == NULL)
+		return (NULL);
+	i = -1;
+	while (++i < n)
+		output[i] = str[i];
+	output[i] = '\0';
+	return (output);
 }

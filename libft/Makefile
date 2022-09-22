@@ -6,7 +6,7 @@
 #    By: schuah <schuah@student.42kl.edu.my>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/03 13:10:50 by schuah            #+#    #+#              #
-#    Updated: 2022/09/19 17:06:34 by schuah           ###   ########.fr        #
+#    Updated: 2022/09/22 20:35:11 by schuah           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -77,7 +77,9 @@ SRC_FILES		=	ft_isalpha \
 					ft_isspace \
 					ft_ultoa_base \
 					ft_uitoa_base \
-					ft_uitoa
+					ft_uitoa \
+					ft_array_to_list \
+					ft_list_to_array
 SRCS 			= 	$(addprefix $(SRCS_DIR), $(addsuffix .c, $(SRC_FILES)))
 OBJS 			= 	$(addprefix $(OBJS_DIR), $(addsuffix .o, $(SRC_FILES)))
 

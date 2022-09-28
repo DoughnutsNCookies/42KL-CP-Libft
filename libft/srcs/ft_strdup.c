@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: schuah <schuah@student.42.kl.edu.my>       +#+  +:+       +#+        */
+/*   By: schuah <schuah@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/04 19:26:25 by schuah            #+#    #+#             */
-/*   Updated: 2022/07/07 10:29:56 by schuah           ###   ########.fr       */
+/*   Updated: 2022/09/27 19:24:08 by schuah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strdup(const char *src)
 	counter = 0;
 	while (src[counter] != '\0')
 		counter++;
-	copy = malloc((counter * 1) + 1);
+	copy = malloc(sizeof(char) * (counter + 1));
 	if (copy == NULL)
 		return (0);
 	index = -1;

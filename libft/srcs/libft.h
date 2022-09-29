@@ -6,7 +6,7 @@
 /*   By: schuah <schuah@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/04 11:03:32 by schuah            #+#    #+#             */
-/*   Updated: 2022/09/27 18:40:04 by schuah           ###   ########.fr       */
+/*   Updated: 2022/09/29 11:01:33 by schuah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 # include <limits.h>
 # include <stdarg.h>
 # include <fcntl.h>
+# include <stdint.h>
 
 typedef struct s_list
 {
@@ -79,6 +80,7 @@ char	*ft_ultoa_base(unsigned long n);
 char	*ft_uitoa_base(unsigned int n, char *base);
 char	*ft_uitoa(unsigned int n);
 int		ft_printf(const char *str, ...);
+int		ft_dprintf(int fd, const char *str, ...);
 char	*get_next_line(int fd);
 t_list	*ft_array_to_list(void *array, int array_size, int elem_size);
 void	*ft_list_to_array(t_list *lst, int elem_size);

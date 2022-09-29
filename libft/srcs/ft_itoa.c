@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: schuah <schuah@student.42.kl.edu.my>       +#+  +:+       +#+        */
+/*   By: maliew <maliew@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/05 14:28:47 by schuah            #+#    #+#             */
-/*   Updated: 2022/07/05 15:56:43 by schuah           ###   ########.fr       */
+/*   Updated: 2022/09/29 00:03:34 by maliew           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ char	*ft_itoa(int n)
 	output[i--] = '\0';
 	if (an == 0)
 		output[0] = 48;
-	while (i >= 0 && an)
+	while (an)
 	{
 		output[i--] = (an % 10) + '0';
 		an /= 10;

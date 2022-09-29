@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: schuah <schuah@student.42kl.edu.my>        +#+  +:+       +#+         #
+#    By: maliew <maliew@student.42kl.edu.my>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/03 13:10:50 by schuah            #+#    #+#              #
-#    Updated: 2022/09/22 20:35:11 by schuah           ###   ########.fr        #
+#    Updated: 2022/09/29 01:52:19 by maliew           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -79,7 +79,11 @@ SRC_FILES		=	ft_isalpha \
 					ft_uitoa_base \
 					ft_uitoa \
 					ft_array_to_list \
-					ft_list_to_array
+					ft_list_to_array \
+					ft_dprintf_get_flags \
+					ft_dprintf_print \
+					ft_dprintf_utils \
+					ft_dprintf
 SRCS 			= 	$(addprefix $(SRCS_DIR), $(addsuffix .c, $(SRC_FILES)))
 OBJS 			= 	$(addprefix $(OBJS_DIR), $(addsuffix .o, $(SRC_FILES)))
 

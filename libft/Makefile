@@ -45,6 +45,7 @@ SRC_FILES		=	ft_isalpha \
 					ft_strndup \
 					ft_substr \
 					ft_strjoin \
+					ft_strjoin_free \
 					ft_strtrim \
 					ft_split \
 					ft_itoa \

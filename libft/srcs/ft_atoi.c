@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: schuah <schuah@student.42.fr>              +#+  +:+       +#+        */
+/*   By: schuah <schuah@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/04 18:11:03 by schuah            #+#    #+#             */
-/*   Updated: 2022/07/20 19:51:17 by schuah           ###   ########.fr       */
+/*   Updated: 2022/10/21 14:14:44 by schuah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,6 @@ int	is_space(int c)
 {
 	return (c == '\t' || c == '\n' || c == '\v'
 		|| c == '\f' || c == '\r' || c == ' ');
-}
-
-int	check_max(int value)
-{
-	if (value == -1)
-		return (0);
-	return (-1);
 }
 
 long	ft_atoi(const char *str)
@@ -36,6 +29,8 @@ long	ft_atoi(const char *str)
 	value = 1;
 	number = 0;
 	counter = 0;
+	if (str == NULL)
+		return (0);
 	while (is_space(str[i]))
 		i++;
 	if (str[i] == '-' || str[i] == '+')

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: schuah <schuah@student.42.kl.edu.my>       +#+  +:+       +#+        */
+/*   By: schuah <schuah@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/04 17:08:42 by schuah            #+#    #+#             */
-/*   Updated: 2022/07/04 18:24:02 by schuah           ###   ########.fr       */
+/*   Updated: 2022/10/21 14:51:05 by schuah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_strnstr(const char *str, const char *to_find, size_t len)
 	size_t	j;
 
 	i = -1;
+	if (!str || !to_find)
+		return (NULL);
 	if (to_find[0] == 0)
 		return ((char *)str);
 	while (str[++i] != '\0' && i < len)

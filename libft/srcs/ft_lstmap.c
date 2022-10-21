@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: schuah <schuah@student.42.kl.edu.my>       +#+  +:+       +#+        */
+/*   By: schuah <schuah@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/05 18:55:09 by schuah            #+#    #+#             */
-/*   Updated: 2022/07/05 19:42:40 by schuah           ###   ########.fr       */
+/*   Updated: 2022/10/21 14:20:21 by schuah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*newlist;
 	t_list	*head;
 
-	if (!lst)
+	if (!lst || !f || !del)
 		return (NULL);
 	newlist = ft_lstnew((*f)(lst->content));
 	if (newlist == NULL)

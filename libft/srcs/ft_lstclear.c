@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: schuah <schuah@student.42.kl.edu.my>       +#+  +:+       +#+        */
+/*   By: schuah <schuah@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/05 18:30:18 by schuah            #+#    #+#             */
-/*   Updated: 2022/07/05 18:44:25 by schuah           ###   ########.fr       */
+/*   Updated: 2022/10/21 14:23:18 by schuah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
 	t_list	*temp;
 
-	if (!lst || !*lst)
+	if (!lst || !*lst || !del)
 		return ;
 	while (lst != NULL && *lst != NULL)
 	{

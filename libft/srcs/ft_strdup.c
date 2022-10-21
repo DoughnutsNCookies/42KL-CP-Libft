@@ -6,7 +6,7 @@
 /*   By: schuah <schuah@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/04 19:26:25 by schuah            #+#    #+#             */
-/*   Updated: 2022/09/27 19:24:08 by schuah           ###   ########.fr       */
+/*   Updated: 2022/10/21 14:40:42 by schuah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_strdup(const char *src)
 	int		counter;
 	int		index;
 
+	if (!src)
+		return (NULL);
 	counter = 0;
 	while (src[counter] != '\0')
 		counter++;

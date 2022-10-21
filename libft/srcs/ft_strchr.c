@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: schuah <schuah@student.42.kl.edu.my>       +#+  +:+       +#+        */
+/*   By: schuah <schuah@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/04 16:04:19 by schuah            #+#    #+#             */
-/*   Updated: 2022/07/04 16:48:14 by schuah           ###   ########.fr       */
+/*   Updated: 2022/10/21 14:37:38 by schuah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ char	*ft_strchr(const char *str, int c)
 	int	i;
 
 	i = -1;
+	if (!str)
+		return (NULL);
 	while (str[++i] != '\0')
 		if (str[i] == (char)c)
 			return ((char *)(str + i));

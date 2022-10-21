@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: schuah <schuah@student.42.kl.edu.my>       +#+  +:+       +#+        */
+/*   By: schuah <schuah@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/05 18:16:13 by schuah            #+#    #+#             */
-/*   Updated: 2022/07/05 18:28:42 by schuah           ###   ########.fr       */
+/*   Updated: 2022/10/21 14:21:11 by schuah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
 	t_list	*temp;
 
-	if (!lst)
+	if (!lst || !del)
 		return ;
 	(*del)(lst->content);
 	temp = lst->next;

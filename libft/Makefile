@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: maliew <maliew@student.42kl.edu.my>        +#+  +:+       +#+         #
+#    By: schuah <schuah@student.42kl.edu.my>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/03 13:10:50 by schuah            #+#    #+#              #
-#    Updated: 2022/09/29 01:52:19 by maliew           ###   ########.fr        #
+#    Updated: 2022/10/31 16:43:45 by schuah           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -48,6 +48,7 @@ SRC_FILES		=	ft_isalpha \
 					ft_strjoin_free \
 					ft_strtrim \
 					ft_split \
+					ft_freesplit \
 					ft_itoa \
 					ft_strmapi \
 					ft_striteri \

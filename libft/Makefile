@@ -6,7 +6,7 @@
 #    By: schuah <schuah@student.42kl.edu.my>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/03 13:10:50 by schuah            #+#    #+#              #
-#    Updated: 2022/11/02 14:54:32 by schuah           ###   ########.fr        #
+#    Updated: 2022/11/02 17:03:40 by schuah           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -86,7 +86,8 @@ SRC_FILES		=	ft_isalpha \
 					ft_dprintf_get_flags \
 					ft_dprintf_print \
 					ft_dprintf_utils \
-					ft_dprintf
+					ft_dprintf \
+					ft_append_char
 SRCS 			= 	$(addprefix $(SRCS_DIR), $(addsuffix .c, $(SRC_FILES)))
 OBJS 			= 	$(addprefix $(OBJS_DIR), $(addsuffix .o, $(SRC_FILES)))
 

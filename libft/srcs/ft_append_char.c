@@ -1,27 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstclear.c                                      :+:      :+:    :+:   */
+/*   ft_append_char.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: schuah <schuah@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/05 18:30:18 by schuah            #+#    #+#             */
-/*   Updated: 2022/11/02 15:59:32 by schuah           ###   ########.fr       */
+/*   Created: 2022/11/02 17:03:07 by schuah            #+#    #+#             */
+/*   Updated: 2022/11/02 17:03:14 by schuah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstclear(t_list **lst, void (*del)(void *))
+char	*ft_append_char(char *input, char c)
 {
-	t_list	*temp;
+	char	*output;
+	int		size;
+	int		i;
 
-	if (!lst || !*lst || !del)
-		return ;
-	while (lst != NULL && *lst != NULL)
+	size = 0;
+	if (input != NULL)
+		size = ft_strlen(input);
+	output = ft_calloc(size + 2, sizeof(char));
+	if (input != NULL)
 	{
-		temp = (*lst)->next;
-		ft_lstdelone(*lst, del);
-		*lst = temp;
+		i = -1;
+		while (input[++i] != '\0')
+			output[i] = input[i];
 	}
+	output[i] = c;
+	output[i + 1] = '\0';
+	free(input);
+	return (output);
 }

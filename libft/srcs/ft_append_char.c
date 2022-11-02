@@ -6,7 +6,7 @@
 /*   By: schuah <schuah@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/02 17:03:07 by schuah            #+#    #+#             */
-/*   Updated: 2022/11/02 17:03:14 by schuah           ###   ########.fr       */
+/*   Updated: 2022/11/02 17:08:44 by schuah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,13 @@ char	*ft_append_char(char *input, char c)
 	int		size;
 	int		i;
 
+	i = -1;
 	size = 0;
 	if (input != NULL)
 		size = ft_strlen(input);
 	output = ft_calloc(size + 2, sizeof(char));
 	if (input != NULL)
 	{
-		i = -1;
 		while (input[++i] != '\0')
 			output[i] = input[i];
 	}
